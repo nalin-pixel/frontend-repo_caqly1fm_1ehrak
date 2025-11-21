@@ -1,5 +1,6 @@
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -29,13 +30,24 @@ export default function Hero() {
           <p className="mt-6 text-lg sm:text-xl text-slate-200/90 max-w-2xl">
             I’m Tushar Wasake — a backend engineer exploring markets, algorithms, and product building. I share what I learn and ship useful tools along the way.
           </p>
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <a href="#blog" className="px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-[0_0_25px_rgba(34,211,238,0.35)] hover:brightness-110 transition">
               Read My Blog
             </a>
             <a href="#projects" className="px-5 py-3 rounded-xl bg-white/10 border border-white/15 text-slate-100 font-medium hover:bg-white/15 transition">
               View My Projects
             </a>
+            <div className="flex items-center gap-2 ml-2">
+              <a aria-label="GitHub" href="#" className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10">
+                <Github size={18} />
+              </a>
+              <a aria-label="LinkedIn" href="#" className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10">
+                <Linkedin size={18} />
+              </a>
+              <a aria-label="Email" href="#contact" className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10">
+                <Mail size={18} />
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

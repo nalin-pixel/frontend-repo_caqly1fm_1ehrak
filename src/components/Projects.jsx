@@ -1,4 +1,6 @@
 import { ExternalLink } from 'lucide-react'
+import SectionHeader from './SectionHeader'
+import GlowCard from './GlowCard'
 
 const projects = [
   {
@@ -25,14 +27,16 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex items-end justify-between mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">My Projects</h2>
-          <a href="#" className="text-cyan-300 hover:text-cyan-200 text-sm inline-flex items-center gap-2">View all <ExternalLink size={16} /></a>
-        </div>
+        <SectionHeader
+          eyebrow="Builds & Case Studies"
+          title="My Projects"
+          subtitle="Small, sharp tools shipped fast. Focus on clarity, performance, and outcomes."
+          cta={<a href="#" className="text-cyan-300 hover:text-cyan-200 text-sm inline-flex items-center gap-2">View all <ExternalLink size={16} /></a>}
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
-            <div key={p.name} className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 hover:bg-white/10 hover:border-white/20 transition shadow-lg">
+            <GlowCard key={p.name} className="group p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-white font-semibold text-lg">{p.name}</h3>
@@ -52,7 +56,7 @@ export default function Projects() {
                   <span key={t} className="px-2.5 py-1 rounded-full text-xs bg-white/10 border border-white/10 text-slate-200">{t}</span>
                 ))}
               </div>
-            </div>
+            </GlowCard>
           ))}
         </div>
       </div>
